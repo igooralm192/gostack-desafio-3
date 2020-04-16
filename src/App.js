@@ -13,9 +13,9 @@ function App() {
 
 	async function handleAddRepository() {
 		const response = await api.post('/repositories', {
-			url: 'https://github.com/igooralm192/gostack-desafio-3',
-			title: 'Front-end com Reactjs',
-			techs: ['React', 'ReactJS', 'Node.js']
+			url: "https://github.com/josepholiveira",
+			title: "Desafio ReactJS",
+			techs: ["React", "Node.js"],
 		})
 
 		setRepositories([...repositories, response.data])
@@ -33,7 +33,7 @@ function App() {
 				{
 					repositories.map(({id, title}) => (
 						<li key={id}>
-							Repositório {title}
+							{title}
 
 							<button onClick={() => handleRemoveRepository(id)}>
 								Remover
